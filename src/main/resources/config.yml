@@ -1,0 +1,90 @@
+messages:
+  only-player: "&cThis command can only be executed by players."
+  usage-to-create: "&fUsage: &a/addwarp <name> <money> <private/public>"
+  warp-already-exist: "&cThis warp already exists."
+  money-format-exception: "&cMoney should be a valid number."
+  private-or-public: "&cUse only 'public' or 'private' for warp type. Example: /addwarp <name> <money> <private/public>"
+  add-and-remove-player: "&fUse: &a/warp add player <warp_name> <player> \n &a/warp remove player <warp_name> <player>"
+  use-to-add-player: "&fUse: &a/warp add player <warp_name> <player>"
+  no-warp: "&cWarp doesn't exist!"
+  no-creator: "&cYou are not the creator of this warp!"
+  no-private: "&cThis warp isn't private!"
+  player-already-in-warp: "&cThis player is already in the warp!"
+  added-player-to-warp: "&aYou add %player% to %warp_name%"
+  use-to-remove-player: "&fUse: &a/warp remove player <warp_name> <player>"
+  player-already-is-not-in-warp: "&cThis player is already not in the warp!"
+  removed-player-in-warp: "&cRemoved player %player% in %warp_name%"
+  usage-remove-warp: "&cUsage: /remwarp <warp_name>"
+  you-creator: "&aYou are creator"
+  removed-warp: "&aWarp %warp_name% is removed"
+  usage-visit-warp: "&cUsage: /visit <warp_name>"
+  take-money: "&cTaken %warp_price% to %warp_name%"
+  no-money: "&cYou don't have money for this warp"
+  player-is-unlisted: "&cYou do not have permission to visit this warp."
+  teleported-to-warp: "&cTeleported to warp: %warp_name%"
+  usage-remove-warp-admin: "&cUsage: /wm remwarp <warp_name>"
+  usage-set-price: "&cUsage: /wm setprice <warp_name> <price>"
+  set-money-message: "&aSet %price% for %warp_name%"
+  usage-visit-admin: "&c/wm visit <warp_name>"
+  admin-commands-usage: "&cUnknown sub-command, usage: /wm help"
+  no-permission: "&cYou don't have permission to use this command!"
+  create-warp: "&aA warp was created with the name: %warp_name%, his price is: %warp_price%"
+  player-is-not-online: "&cTarget player is not online"
+
+zone-settings:
+  radius: 10
+
+menu-settings:
+  title: "Warps"
+  items:
+    items-1:
+      item-type: "YELLOW_STAINED_GLASS_PANE"
+      item-name: "&f"
+      lore:
+        - ""
+      slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 45
+        - 46
+        - 47
+        - 48
+        - 49
+        - 50
+        - 51
+        - 52
+        - 53
+    warps-example:
+      item-type: "DIAMOND"
+      item-name: "&a%warp_name% - %warp_state%"
+      lore:
+        - ""
+        - "&fPrice: &a%warp_price%"
+        - "&fState: &a%warp_state%"
+        - "&fWarp Owner: &a%warp_owner%"
+        - "&fWarp Name: &a%warp_name%"
+        - ""
+
+database:
+  jdbcUrl: "jdbc:mysql://MySQL-8.2:3306/warps"
+  username: "root"
+  password: ""
+  maximumPoolSize: 10
+  minimumIdle: 2
+  idleTimeout: 600000
+  connectionTimeout: 30000
